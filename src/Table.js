@@ -14,7 +14,7 @@ const Table = () => {
     // },[])
     const getTaskData = async ()=> {
         try{
-            const response = await axios.get('https://sheetdb.io/api/v1/negm5d2pso15z');
+            const response = await axios.get('data.json');
             setTaskData(response.data)
         }catch(error){
                 console.log(error);
@@ -26,10 +26,53 @@ const Table = () => {
             name: "first name",
             selector: (row)=> row.first_name,
         },
+        {
+            name: "first name",
+            selector: (row) => row.last_name,
+        },
+         {
+             name: "email",
+             selector: (row) => row.email,
+         },
+         {
+             name: "gender",
+             selector: (row) => row.gender,
+         },
+         {
+             name: "ip Address",
+             selector: (row) => row.ip_address,
+         },
+        
+         {
+             name: "airport Code",
+             selector: (row) => row.airportCode,
+         },
+
           {
-              name: "first name",
-              selector: (row) => row.last_name,
+             name: "time",
+             selector: (row) => row.time,
+         },
+           {
+               name: "status",
+               selector: (row) => row.status,
+           },
+            {
+             name: "mobile",
+             selector: (row) => row.mobile,
+         },
+          {
+              name: "area",
+              selector: (row) => row.area,
           },
+           {
+               name: "show",
+               selector: (row) => row.show,
+           },
+            {
+                edit: "show",
+                selector: (row) => row.edit,
+            },
+
 
     ]
     
@@ -38,7 +81,7 @@ const Table = () => {
     },[])
 
     return (
-        <div>
+        <div className='w-10/12'>
             
             <DataTable
             columns={columns}
