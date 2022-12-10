@@ -84,8 +84,13 @@ const Table = () => {
         <div className='w-10/12'>
             
             <DataTable
+            title="Mock_Data-1"
             columns={columns}
             data={taskData}
+            fixedHeader
+            pagination
+            selectableRows
+            selectableRowsHighlight
         />
         </div>
     );
