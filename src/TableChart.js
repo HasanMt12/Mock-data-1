@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DataTable from 'react-data-table-component';
 
 const TableChart = ({table}) => {
     const {
@@ -15,9 +16,17 @@ const TableChart = ({table}) => {
         show,
         edit
     } = table;
+    const [data, setData] = useState([])
+    // const [loading, setLoading]= (false)
+    // const [perPage , setPerPage] = useState(10)
+
     return (
         <div>
-            <h1>{email}</h1>
+            {/* <h1>{email}</h1> */}
+               <DataTable
+           
+            data={data}
+        />
         </div>
     );
 };
