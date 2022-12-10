@@ -38,6 +38,10 @@ const Table = () => {
     console.log(taskData);
     const columns = [
         {
+            name: "id",
+            selector: (row) => row.id
+        },
+        {
             name: "first name",
             selector: (row)=> row.first_name, 
             sortable: true
@@ -92,12 +96,48 @@ const Table = () => {
            {
                name: "show",
                selector: (row) => row.show,
-               sortable: true
+               sortable: true,
+
+               	conditionalCellStyles: [
+			{
+				when: row => row.show === "TRUE",
+				style: {
+					backgroundColor: 'green',
+					
+				},
+			},
+			{
+				when: row => row.show === "FALSE",
+				style: {
+					backgroundColor: 'red',
+					
+				},
+			},
+			
+		],
+	
            },
             {
                 edit: "show",
                 selector: (row) => row.edit,
-                sortable: true
+                sortable: true,
+                     	conditionalCellStyles: [
+			{
+				when: row => row.show === "FALSE",
+				style: {
+					backgroundColor: 'red',
+					
+				},
+			},
+			{
+				when: row => row.show === "TRUE",
+				style: {
+					backgroundColor: 'green',
+					
+				},
+			},
+			
+		],
             },
 
 
@@ -121,6 +161,7 @@ const Table = () => {
             selectableRowsHighlight
         />
         </div>
+   
     );
 };
 
