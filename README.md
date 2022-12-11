@@ -3,7 +3,8 @@
 Hosted in ntelify -Click ->[react Data Table Design](https://legendary-lollipop-a15162.netlify.app/)
  
  
- #Feture 
+ #Feture  
+ 
 - Design a data table react component .
 - Responsive Data table.
 - Menu toggle functionality on the column header with sort functionality.
