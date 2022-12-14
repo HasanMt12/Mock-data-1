@@ -16,4 +16,4 @@ React table component [React table component documentation](https://jbetancur.gi
 Instalation - npm install react-data-table-component
 
 
-![screencapture-localhost-3000-2022-12-11-02_59_37](https://user-images.githubusercontent.com/108423290/206875497-798fc4d4-954b-4d70-8df8-a3e334c765e8.png)
+
